@@ -5,18 +5,20 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int MIN_DIMENSION = 1;
+    private static final int MAX_DIMENSION = 20;
 
     private int getRandomNumber() {
-        return random.nextInt(1, 20);
+        return random.nextInt(MIN_DIMENSION, MAX_DIMENSION);
     }
 
-    private Color getRandomColor() {
+    private String getRandomColor() {
         return colorSupplier.getRandomColor();
     }
 
     public Figure getRandomFigure() {
         int randomFigureNumber = new Random().nextInt(Figures.values().length);
-        Color randomColor = getRandomColor();
+        String randomColor = getRandomColor();
 
         switch (randomFigureNumber) {
             case 0:
@@ -49,6 +51,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(10, Color.WHITE.name());
     }
 }
