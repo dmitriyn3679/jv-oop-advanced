@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int MIN_DIMENSION = 1;
     private static final int MAX_DIMENSION = 20;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private int getRandomNumber() {
         return random.nextInt(MIN_DIMENSION, MAX_DIMENSION);
