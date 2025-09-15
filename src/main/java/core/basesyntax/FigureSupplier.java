@@ -24,9 +24,9 @@ public class FigureSupplier {
                 return new Circle(radius, randomColor);
 
             case 1:
-                int rSideA = getRandomNumber();
-                int rSideB = getRandomNumber();
-                return new Rectangle(rSideA, rSideB, randomColor);
+                int rectangleSideA = getRandomNumber();
+                int rectangleSideB = getRandomNumber();
+                return new Rectangle(rectangleSideA, rectangleSideB, randomColor);
 
             case 2:
                 int side = getRandomNumber();
