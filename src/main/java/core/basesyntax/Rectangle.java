@@ -1,22 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final int x;
-    private final int y;
+    private final int sideA;
+    private final int sideB;
 
-    public Rectangle(int x, int y, Color color) {
+    public Rectangle(int sideA, int sideB, Color color) {
         super(color);
-        this.x = x;
-        this.y = y;
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
     public double getArea() {
-        return x * y;
+        return sideA * sideB;
     }
 
     @Override
     public String toString() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units, x: " + x + " units, " + "y: " + y + " units, color: " + color;
+        return "Figure: rectangle, area: " + getArea() +
+                " sq. units, x: " + sideA + " units, " + "y: "
+                + sideB + " units, color: " + color;
     }
 }

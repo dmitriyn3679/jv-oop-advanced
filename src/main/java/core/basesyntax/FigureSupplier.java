@@ -24,13 +24,13 @@ public class FigureSupplier {
                 return new Circle(radius, randomColor);
 
             case 1:
-                int a = getRandomNumber();
-                int b = getRandomNumber();
-                return new Rectangle(a, b, randomColor);
+                int rSideA = getRandomNumber();
+                int rSideB = getRandomNumber();
+                return new Rectangle(rSideA, rSideB, randomColor);
 
             case 2:
-                int x = getRandomNumber();
-                return new Square(x, randomColor);
+                int side = getRandomNumber();
+                return new Square(side, randomColor);
 
             case 3:
                 int firstLeg = getRandomNumber();
